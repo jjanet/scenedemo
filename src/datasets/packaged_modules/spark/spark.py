@@ -8,16 +8,16 @@ from typing import TYPE_CHECKING, Iterable, List, Optional, Tuple, Union
 import numpy as np
 import pyarrow as pa
 
-import datasets
-from datasets.arrow_writer import ArrowWriter, ParquetWriter
-from datasets.config import MAX_SHARD_SIZE
-from datasets.filesystems import (
+from src import datasets
+from src.datasets.arrow_writer import ArrowWriter, ParquetWriter
+from src.datasets.config import MAX_SHARD_SIZE
+from src.datasets.filesystems import (
     is_remote_filesystem,
     rename,
 )
-from datasets.iterable_dataset import _BaseExamplesIterable
-from datasets.utils import experimental
-from datasets.utils.py_utils import convert_file_size_to_int
+from src.datasets.iterable_dataset import _BaseExamplesIterable
+from src.datasets.utils import experimental
+from src.datasets.utils.py_utils import convert_file_size_to_int
 
 
 logger = datasets.utils.logging.get_logger(__name__)

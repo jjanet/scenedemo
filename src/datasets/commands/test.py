@@ -5,13 +5,13 @@ from pathlib import Path
 from shutil import copyfile, rmtree
 from typing import Generator, Optional
 
-import datasets.config
-from datasets.builder import DatasetBuilder
-from datasets.commands import BaseDatasetsCLICommand
-from datasets.download.download_manager import DownloadMode
-from datasets.load import dataset_module_factory, import_main_class
-from datasets.utils.info_utils import VerificationMode
-from datasets.utils.logging import ERROR, get_logger
+from src import datasets.config
+from src.datasets.builder import DatasetBuilder
+from src.datasets.commands import BaseDatasetsCLICommand
+from src.datasets.download.download_manager import DownloadMode
+from src.datasets.load import dataset_module_factory, import_main_class
+from src.datasets.utils.info_utils import VerificationMode
+from src.datasets.utils.logging import ERROR, get_logger
 
 
 logger = get_logger(__name__)

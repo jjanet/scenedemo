@@ -77,7 +77,7 @@ class Pickler(dill.Pickler):
             # Faster, but fails for unorderable elements
             items = sorted(items)
         except Exception:  # TypeError, decimal.InvalidOperation, etc.
-            from datasets.fingerprint import Hasher
+            from src.datasets.fingerprint import Hasher
 
             items = sorted(items, key=lambda x: Hasher.hash(x[0]))
         dill.Pickler._batch_setitems(self, items)
@@ -132,7 +132,7 @@ def _save_set(pickler, obj):
         # Faster, but fails for unorderable elements
         args = (sorted(obj),)
     except Exception:  # TypeError, decimal.InvalidOperation, etc.
-        from datasets.fingerprint import Hasher
+        from src.datasets.fingerprint import Hasher
 
         args = (sorted(obj, key=Hasher.hash),)
 

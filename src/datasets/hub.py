@@ -13,11 +13,11 @@ from huggingface_hub import (
 )
 from huggingface_hub.utils import HfHubHTTPError
 
-import datasets.config
-from datasets.info import DatasetInfosDict
-from datasets.inspect import get_dataset_config_names, get_dataset_default_config_name
-from datasets.load import load_dataset, load_dataset_builder
-from datasets.utils.metadata import MetadataConfigs
+from src import datasets.config
+from src.datasets.info import DatasetInfosDict
+from src.datasets.inspect import get_dataset_config_names, get_dataset_default_config_name
+from src.datasets.load import load_dataset, load_dataset_builder
+from src.datasets.utils.metadata import MetadataConfigs
 
 
 def convert_to_parquet(

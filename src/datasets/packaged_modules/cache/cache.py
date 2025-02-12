@@ -8,10 +8,10 @@ from typing import List, Optional, Tuple, Union
 
 import pyarrow as pa
 
-import datasets
-import datasets.config
-import datasets.data_files
-from datasets.naming import camelcase_to_snakecase, filenames_for_dataset_split
+from src import datasets
+import src.datasets.config
+import src.datasets.data_files
+from src.datasets.naming import camelcase_to_snakecase, filenames_for_dataset_split
 
 
 logger = datasets.utils.logging.get_logger(__name__)

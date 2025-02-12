@@ -25,8 +25,8 @@ class patch_submodule:
     Example::
 
         >>> import importlib
-        >>> from datasets.load import dataset_module_factory
-        >>> from datasets.streaming import patch_submodule, xjoin
+        >>> from src.datasets.load import dataset_module_factory
+        >>> from src.datasets.streaming import patch_submodule, xjoin
         >>>
         >>> dataset_module = dataset_module_factory("snli")
         >>> snli_module = importlib.import_module(dataset_module.module_path)

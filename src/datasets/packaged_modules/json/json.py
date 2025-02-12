@@ -7,10 +7,10 @@ import pandas as pd
 import pyarrow as pa
 import pyarrow.json as paj
 
-import datasets
-import datasets.config
-from datasets.table import table_cast
-from datasets.utils.file_utils import readline
+from src import datasets
+import src.datasets.config
+from src.datasets.table import table_cast
+from src.datasets.utils.file_utils import readline
 
 
 logger = datasets.utils.logging.get_logger(__name__)

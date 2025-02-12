@@ -4,8 +4,8 @@ from typing import Optional
 
 import pyarrow as pa
 
-import datasets
-from datasets.table import table_cast
+from src import datasets
+from src.datasets.table import table_cast
 
 
 logger = datasets.utils.logging.get_logger(__name__)

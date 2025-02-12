@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 from argparse import ArgumentParser
 
-from datasets.commands.convert import ConvertCommand
-from datasets.commands.convert_to_parquet import ConvertToParquetCommand
-from datasets.commands.delete_from_hub import DeleteFromHubCommand
-from datasets.commands.env import EnvironmentCommand
-from datasets.commands.test import TestCommand
-from datasets.utils.logging import set_verbosity_info
+from src.datasets.commands.convert import ConvertCommand
+from src.datasets.commands.convert_to_parquet import ConvertToParquetCommand
+from src.datasets.commands.delete_from_hub import DeleteFromHubCommand
+from src.datasets.commands.env import EnvironmentCommand
+from src.datasets.commands.test import TestCommand
+from src.datasets.utils.logging import set_verbosity_info
 
 
 def parse_unknown_args(unknown_args):

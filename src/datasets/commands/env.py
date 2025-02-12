@@ -7,7 +7,7 @@ import pandas
 import pyarrow
 
 from datasets import __version__ as version
-from datasets.commands import BaseDatasetsCLICommand
+from src.datasets.commands import BaseDatasetsCLICommand
 
 
 def info_command_factory(_):

@@ -352,7 +352,7 @@ def resolve_pattern(
 
     Example::
 
-        >>> from datasets.data_files import resolve_pattern
+        >>> from src.datasets.data_files import resolve_pattern
         >>> base_path = "."
         >>> resolve_pattern("docs/**/*.py", base_path)
         [/Users/mariosasko/Desktop/projects/datasets/docs/source/_config.py']

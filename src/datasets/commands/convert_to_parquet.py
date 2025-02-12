@@ -1,8 +1,8 @@
 from argparse import ArgumentParser
 from typing import Optional
 
-from datasets.commands import BaseDatasetsCLICommand
-from datasets.hub import convert_to_parquet
+from src.datasets.commands import BaseDatasetsCLICommand
+from src.datasets.hub import convert_to_parquet
 
 
 def _command_factory(args):

@@ -8,8 +8,8 @@ import pandas as pd
 import pyarrow as pa
 import pyarrow.json as paj
 
-import datasets
-from datasets.features.features import FeatureType
+from src import datasets
+from src.datasets.features.features import FeatureType
 
 
 logger = datasets.utils.logging.get_logger(__name__)

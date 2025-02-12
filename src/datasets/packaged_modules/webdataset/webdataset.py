@@ -8,9 +8,9 @@ import fsspec
 import numpy as np
 import pyarrow as pa
 
-import datasets
-from datasets.features.features import cast_to_python_objects
-from datasets.utils.file_utils import SINGLE_FILE_COMPRESSION_EXTENSION_TO_PROTOCOL, xbasename
+from src import datasets
+from src.datasets.features.features import cast_to_python_objects
+from src.datasets.utils.file_utils import SINGLE_FILE_COMPRESSION_EXTENSION_TO_PROTOCOL, xbasename
 
 
 logger = datasets.utils.logging.get_logger(__name__)

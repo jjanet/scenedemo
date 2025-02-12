@@ -6,8 +6,8 @@ import pyarrow as pa
 import pyarrow.dataset as ds
 import pyarrow.parquet as pq
 
-import datasets
-from datasets.table import table_cast
+from src import datasets
+from src.datasets.table import table_cast
 
 
 logger = datasets.utils.logging.get_logger(__name__)

@@ -20,7 +20,7 @@ def experimental(fn: Callable) -> Callable:
     Example:
 
     ```python
-    >>> from datasets.utils import experimental
+    >>> from src.datasets.utils import experimental
 
     >>> @experimental
     ... def my_function():

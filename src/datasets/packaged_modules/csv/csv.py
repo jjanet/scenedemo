@@ -5,11 +5,11 @@ from typing import Any, Callable, Dict, List, Optional, Union
 import pandas as pd
 import pyarrow as pa
 
-import datasets
-import datasets.config
-from datasets.features.features import require_storage_cast
-from datasets.table import table_cast
-from datasets.utils.py_utils import Literal
+from src import datasets
+import src.datasets.config
+from src.datasets.features.features import require_storage_cast
+from src.datasets.table import table_cast
+from src.datasets.utils.py_utils import Literal
 
 
 logger = datasets.utils.logging.get_logger(__name__)

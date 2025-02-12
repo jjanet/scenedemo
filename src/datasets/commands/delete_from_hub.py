@@ -1,8 +1,8 @@
 from argparse import ArgumentParser
 from typing import Optional
 
-from datasets.commands import BaseDatasetsCLICommand
-from datasets.hub import delete_from_hub
+from src.datasets.commands import BaseDatasetsCLICommand
+from src.datasets.hub import delete_from_hub
 
 
 def _command_factory(args):

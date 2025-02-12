@@ -6,8 +6,8 @@ from typing import Optional
 import pandas as pd
 import pyarrow as pa
 
-import datasets
-from datasets.table import table_cast
+from src import datasets
+from src.datasets.table import table_cast
 
 
 @dataclass

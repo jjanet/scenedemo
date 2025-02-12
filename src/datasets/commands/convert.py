@@ -3,8 +3,8 @@ import re
 import shutil
 from argparse import ArgumentParser, Namespace
 
-from datasets.commands import BaseDatasetsCLICommand
-from datasets.utils.logging import get_logger
+from src.datasets.commands import BaseDatasetsCLICommand
+from src.datasets.utils.logging import get_logger
 
 
 HIGHLIGHT_MESSAGE_PRE = """<<<<<<< This should probably be modified because it mentions: """

@@ -109,8 +109,8 @@ class TypedSequence:
 
     Example::
 
-        from datasets.features import Array2D, Array2DExtensionType, Value
-        from datasets.arrow_writer import TypedSequence
+        from src.datasets.features import Array2D, Array2DExtensionType, Value
+        from src.datasets.arrow_writer import TypedSequence
         import pyarrow as pa
 
         arr = pa.array(TypedSequence([1, 2, 3], type=Value("int32")))

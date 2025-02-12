@@ -11,7 +11,7 @@ NOTE: Environment variable `HF_DATASETS_DISABLE_PROGRESS_BARS` has the priority.
 
 Example:
     ```py
-    from datasets.utils import (
+    from src.datasets.utils import (
         are_progress_bars_disabled,
         disable_progress_bars,
         enable_progress_bars,

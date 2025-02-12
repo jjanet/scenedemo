@@ -5,10 +5,10 @@ from typing import TYPE_CHECKING, Dict, List, Optional, Tuple, Union
 import pandas as pd
 import pyarrow as pa
 
-import datasets
-import datasets.config
-from datasets.features.features import require_storage_cast
-from datasets.table import table_cast
+from src import datasets
+import src.datasets.config
+from src.datasets.features.features import require_storage_cast
+from src.datasets.table import table_cast
 
 
 if TYPE_CHECKING:

@@ -5214,7 +5214,7 @@ class Dataset(DatasetInfoMixin, IndexableMixin, TensorflowDatasetMixin):
 
         In a distributed setup like PyTorch DDP with a PyTorch DataLoader and shuffling
         ```python
-        >>> from datasets.distributed import split_dataset_by_node
+        >>> from src.datasets.distributed import split_dataset_by_node
         >>> ids = ds.to_iterable_dataset(num_shards=512)
         >>> ids = ids.shuffle(buffer_size=10_000, seed=42)  # will shuffle the shards order and use a shuffle buffer when you start iterating
         >>> ids = split_dataset_by_node(ds, world_size=8, rank=0)  # will keep only 512 / 8 = 64 shards from the shuffled lists of shards when you start iterating

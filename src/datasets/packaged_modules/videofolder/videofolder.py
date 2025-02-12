@@ -1,6 +1,6 @@
 from typing import List
 
-import datasets
+from src import datasets
 
 from ..folder_based_builder import folder_based_builder
 
