@@ -6,8 +6,7 @@
 # print(ds_builder.info.description)
 
 
+from src.datasets import load_dataset
+dataset = load_dataset("csv", data_files="best_movie_ratings_features.csv")
+print(dataset)
 
-from datasets.load import load_dataset
-
-dataset = load_dataset("rotten_tomatoes", split="train")
-print(dataset.info)
