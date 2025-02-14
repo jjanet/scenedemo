@@ -88,7 +88,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.data
         ```
@@ -103,7 +103,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.cache_files
         {'test': [{'filename': '/root/.cache/huggingface/datasets/rotten_tomatoes_movie_review/default/1.0.0/40d411e45a6ce3484deed7cc15b82a53dad9a72aafd9f86f8f227134bec5ca46/rotten_tomatoes_movie_review-test.arrow'}],
@@ -121,7 +121,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.num_columns
         {'test': 2, 'train': 2, 'validation': 2}
@@ -137,7 +137,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.num_rows
         {'test': 1066, 'train': 8530, 'validation': 1066}
@@ -153,7 +153,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.column_names
         {'test': ['text', 'label'],
@@ -171,7 +171,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.shape
         {'test': (1066, 2), 'train': (8530, 2), 'validation': (1066, 2)}
@@ -188,7 +188,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("squad")
         >>> ds["train"].features
         {'answers': Sequence(feature={'text': Value(dtype='string', id=None), 'answer_start': Value(dtype='int32', id=None)}, length=-1, id=None),
@@ -227,7 +227,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.unique("label")
         {'test': [1, 0], 'train': [1, 0], 'validation': [1, 0]}
@@ -246,7 +246,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.cleanup_cache_files()
         {'test': 0, 'train': 0, 'validation': 0}
@@ -275,7 +275,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset, ClassLabel, Value
+        >>> from src.datasets import load_dataset, ClassLabel, Value
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds["train"].features
         {'label': ClassLabel(names=['neg', 'pos'], id=None),
@@ -307,7 +307,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset, ClassLabel
+        >>> from src.datasets import load_dataset, ClassLabel
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds["train"].features
         {'label': ClassLabel(names=['neg', 'pos'], id=None),
@@ -341,7 +341,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds = ds.remove_columns("label")
         DatasetDict({
@@ -381,7 +381,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds = ds.rename_column("label", "label_new")
         DatasetDict({
@@ -424,7 +424,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.rename_columns({'text': 'text_new', 'label': 'label_new'})
         DatasetDict({
@@ -460,7 +460,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.select_columns("text")
         DatasetDict({
@@ -496,7 +496,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("boolq")
         >>> ds["train"].features
         {'answer': Value(dtype='bool', id=None),
@@ -581,7 +581,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> from transformers import AutoTokenizer
         >>> tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
         >>> ds = ds.map(lambda x: tokenizer(x["text"], truncation=True, padding=True), batched=True)
@@ -606,7 +606,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> from transformers import AutoTokenizer
         >>> ds = load_dataset("rotten_tomatoes")
         >>> tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
@@ -683,7 +683,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> from transformers import AutoTokenizer
         >>> ds = load_dataset("rotten_tomatoes")
         >>> tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
@@ -753,7 +753,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> from transformers import AutoTokenizer
         >>> ds = load_dataset("rotten_tomatoes")
         >>> tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
@@ -862,7 +862,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> def add_prefix(example):
         ...     example["text"] = "Review: " + example["text"]
@@ -974,7 +974,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds.filter(lambda x: x["label"] == 1)
         DatasetDict({
@@ -1106,7 +1106,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset('rotten_tomatoes')
         >>> ds['train']['label'][:10]
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
@@ -1182,7 +1182,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes")
         >>> ds["train"]["label"][:10]
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
@@ -1375,7 +1375,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import DatasetDict
+        >>> from src.datasets import DatasetDict
         >>> ds = DatasetDict.from_csv({'train': 'path/to/dataset.csv'})
         ```
         """
@@ -1414,7 +1414,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import DatasetDict
+        >>> from src.datasets import DatasetDict
         >>> ds = DatasetDict.from_json({'train': 'path/to/dataset.json'})
         ```
         """
@@ -1458,7 +1458,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import DatasetDict
+        >>> from src.datasets import DatasetDict
         >>> ds = DatasetDict.from_parquet({'train': 'path/to/dataset/parquet'})
         ```
         """
@@ -1502,7 +1502,7 @@ class DatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import DatasetDict
+        >>> from src.datasets import DatasetDict
         >>> ds = DatasetDict.from_text({'train': 'path/to/dataset.txt'})
         ```
         """
@@ -1831,7 +1831,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> from transformers import AutoTokenizer
         >>> ds = load_dataset("rotten_tomatoes", split="validation", streaming=True)
         >>> tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
@@ -1923,7 +1923,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes", streaming=True)
         >>> def add_prefix(example):
         ...     example["text"] = "Review: " + example["text"]
@@ -1988,7 +1988,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes", streaming=True)
         >>> ds = ds.filter(lambda x: x["label"] == 0)
         >>> list(ds["train"].take(3))
@@ -2046,7 +2046,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes", streaming=True)
         >>> list(ds["train"].take(3))
         [{'label': 1,
@@ -2089,7 +2089,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes", streaming=True)
         >>> ds = ds.rename_column("text", "movie_review")
         >>> next(iter(ds["train"]))
@@ -2120,7 +2120,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes", streaming=True)
         >>> ds = ds.rename_columns({"text": "movie_review", "label": "rating"})
         >>> next(iter(ds["train"]))
@@ -2149,7 +2149,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes", streaming=True)
         >>> ds = ds.remove_columns("label")
         >>> next(iter(ds["train"]))
@@ -2175,7 +2175,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes", streaming=True)
         >>> ds = ds.select("text")
         >>> next(iter(ds["train"]))
@@ -2200,7 +2200,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset, ClassLabel
+        >>> from src.datasets import load_dataset, ClassLabel
         >>> ds = load_dataset("rotten_tomatoes", streaming=True)
         >>> ds["train"].features
         {'label': ClassLabel(names=['neg', 'pos'], id=None),
@@ -2236,7 +2236,7 @@ class IterableDatasetDict(dict):
         Example:
 
         ```py
-        >>> from datasets import load_dataset
+        >>> from src.datasets import load_dataset
         >>> ds = load_dataset("rotten_tomatoes", streaming=True)
         >>> ds["train"].features
         {'label': ClassLabel(names=['neg', 'pos'], id=None),

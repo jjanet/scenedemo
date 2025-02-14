@@ -98,6 +98,7 @@ from .utils.typing import PathLike
 from .utils.version import Version
 
 
+
 logger = get_logger(__name__)
 
 ALL_ALLOWED_EXTENSIONS = list(_EXTENSION_TO_MODULE.keys()) + [".zip"]
@@ -1832,7 +1833,7 @@ def load_dataset_builder(
     Example:
 
     ```py
-    >>> from datasets import load_dataset_builder
+    >>> from src.datasets import load_dataset_builder
     >>> ds_builder = load_dataset_builder('cornell-movie-review-data/rotten_tomatoes')
     >>> ds_builder.info.features
     {'label': ClassLabel(names=['neg', 'pos'], id=None),
@@ -2061,11 +2062,11 @@ def load_dataset(
     Load a dataset from the Hugging Face Hub:
 
     ```py
-    >>> from datasets import load_dataset
+    >>> from src.datasets import load_dataset
     >>> ds = load_dataset('cornell-movie-review-data/rotten_tomatoes', split='train')
 
     # Load a subset or dataset configuration (here 'sst2')
-    >>> from datasets import load_dataset
+    >>> from src.datasets import load_dataset
     >>> ds = load_dataset('nyu-mll/glue', 'sst2', split='train')
 
     # Manual mapping of data files to splits
@@ -2080,29 +2081,29 @@ def load_dataset(
 
     ```py
     # Load a CSV file
-    >>> from datasets import load_dataset
+    >>> from src.datasets import load_dataset
     >>> ds = load_dataset('csv', data_files='path/to/local/my_dataset.csv')
 
     # Load a JSON file
-    >>> from datasets import load_dataset
+    >>> from src.datasets import load_dataset
     >>> ds = load_dataset('json', data_files='path/to/local/my_dataset.json')
 
     # Load from a local loading script (not recommended)
-    >>> from datasets import load_dataset
+    >>> from src.datasets import load_dataset
     >>> ds = load_dataset('path/to/local/loading_script/loading_script.py', split='train')
     ```
 
     Load an [`~datasets.IterableDataset`]:
 
     ```py
-    >>> from datasets import load_dataset
+    >>> from src.datasets import load_dataset
     >>> ds = load_dataset('cornell-movie-review-data/rotten_tomatoes', split='train', streaming=True)
     ```
 
     Load an image dataset with the `ImageFolder` dataset builder:
 
     ```py
-    >>> from datasets import load_dataset
+    >>> from src.datasets import load_dataset
     >>> ds = load_dataset('imagefolder', data_dir='/path/to/images', split='train')
     ```
     """
@@ -2197,7 +2198,7 @@ def load_from_disk(
     Example:
 
     ```py
-    >>> from datasets import load_from_disk
+    >>> from src.datasets import load_from_disk
     >>> ds = load_from_disk('path/to/dataset/directory')
     ```
     """

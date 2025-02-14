@@ -509,7 +509,7 @@ class DatasetBuilder:
         Example:
 
         ```py
-        >>> from datasets import load_dataset_builder
+        >>> from src.datasets import load_dataset_builder
         >>> ds_builder = load_dataset_builder('vivos')
         >>> ds_builder.get_all_exported_dataset_infos()
         {'default': DatasetInfo(description='', citation='', homepage='', license='', features={'speaker_id': Value(dtype='string', id=None), 'path': Value(dtype='string', id=None), 'audio': Audio(sampling_rate=16000, mono=True, decode=True, id=None), 'sentence': Value(dtype='string', id=None)}, post_processed=None, supervised_keys=None, builder_name=None, dataset_name=None, config_name='default', version=None, splits={'train': SplitInfo(name='train', num_bytes=1722002133, num_examples=11660, shard_lengths=None, dataset_name=None), 'test': SplitInfo(name='test', num_bytes=86120227, num_examples=760, shard_lengths=None, dataset_name=None)}, download_checksums=None, download_size=1475540500, post_processing_size=None, dataset_size=1808122360, size_in_bytes=None)}
@@ -523,7 +523,7 @@ class DatasetBuilder:
         Example:
 
         ```py
-        >>> from datasets import load_dataset_builder
+        >>> from src.datasets import load_dataset_builder
         >>> ds_builder = load_dataset_builder('rotten_tomatoes')
         >>> ds_builder.get_exported_dataset_info()
         DatasetInfo(description='', citation='', homepage='', license='', features={'speaker_id': Value(dtype='string', id=None), 'path': Value(dtype='string', id=None), 'audio': Audio(sampling_rate=16000, mono=True, decode=True, id=None), 'sentence': Value(dtype='string', id=None)}, post_processed=None, supervised_keys=None, builder_name=None, dataset_name=None, config_name='default', version=None, splits={'train': SplitInfo(name='train', num_bytes=1722002133, num_examples=11660, shard_lengths=None, dataset_name=None), 'test': SplitInfo(name='test', num_bytes=86120227, num_examples=760, shard_lengths=None, dataset_name=None)}, download_checksums=None, download_size=1475540500, post_processing_size=None, dataset_size=1808122360, size_in_bytes=None)
@@ -781,7 +781,7 @@ class DatasetBuilder:
         Download and prepare the dataset as Arrow files that can be loaded as a Dataset using `builder.as_dataset()`:
 
         ```py
-        >>> from datasets import load_dataset_builder
+        >>> from src.datasets import load_dataset_builder
         >>> builder = load_dataset_builder("rotten_tomatoes")
         >>> builder.download_and_prepare()
         ```
@@ -789,7 +789,7 @@ class DatasetBuilder:
         Download and prepare the dataset as sharded Parquet files locally:
 
         ```py
-        >>> from datasets import load_dataset_builder
+        >>> from src.datasets import load_dataset_builder
         >>> builder = load_dataset_builder("rotten_tomatoes")
         >>> builder.download_and_prepare("./output_dir", file_format="parquet")
         ```
@@ -797,7 +797,7 @@ class DatasetBuilder:
         Download and prepare the dataset as sharded Parquet files in a cloud storage:
 
         ```py
-        >>> from datasets import load_dataset_builder
+        >>> from src.datasets import load_dataset_builder
         >>> storage_options = {"key": aws_access_key_id, "secret": aws_secret_access_key}
         >>> builder = load_dataset_builder("rotten_tomatoes")
         >>> builder.download_and_prepare("s3://my-bucket/my_rotten_tomatoes", storage_options=storage_options, file_format="parquet")
@@ -1092,7 +1092,7 @@ class DatasetBuilder:
         Example:
 
         ```py
-        >>> from datasets import load_dataset_builder
+        >>> from src.datasets import load_dataset_builder
         >>> builder = load_dataset_builder('rotten_tomatoes')
         >>> builder.download_and_prepare()
         >>> ds = builder.as_dataset(split='train')
